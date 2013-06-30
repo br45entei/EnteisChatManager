@@ -1,0 +1,101 @@
+# These are the default strings that this plugin uses.
+# Configure these strings to your hearts' content.
+# Leaving them blank will make the plugin show nothing.
+# You can use any of the '&' color codes and &z(my customized new-line code) freely.
+# Note: If you have the plugin "Entei's Commands" installed, then some of these
+# settings may be overridden by that plugin.
+
+broadcastPrefix: '&f[&4Broadcast&f] &6'
+announcementPrefix: '§f[§6Announcement§f] §c'
+consoleSayPrefix: '&f[&5Server&f] &a'
+useConsoleSayFormat: true
+noAccess: '&4You do not have access to this command.'
+noPermission: '&cYou do not have permission to use this command.&z&cPlease contact a server administrator if you believe that this is in error.'
+playerOnly: '&4This command can only be used by an online player.'
+
+# This depicts whether or not general debugging messages are sent to the console.
+# In development builds, enabling this may send extra messages that can seem spammy.
+showDebugMsgs: false
+
+# This is how everyone sees their name displayed in normal chat.
+# Default setting: 'prefix&r&f<name&r&f>suffix&r&f: message'
+# Set enableChatManagement to false to disable chat management.
+# Disabling this will disable most of the options below!
+# Default setting: true
+enableChatManagement: true
+
+chatSayFormat: 'prefix&r&f<name&r&f>suffix&r&f: message'
+enableChatFormat: true
+
+# Chat Logging To File ------------------------------------------------------------------
+# This tells the plugin if it should log all player-made chats to "\plugins\EnteisChatManager\chatLog.html"
+# Default: false
+enableChatLogging: false
+
+# Change this only if you have another file that you want to use.
+# Leaving this blank will make it default to 'chatLog.html'.
+chatLogFileName: 'chatLog.html'
+
+chatLogDateColor: "&3"
+
+# You can set the size of the font that is displayed in the html here.
+# Applicable sizes are: 'tiny', 'small', 'medium'(or 'normal'), 'large', and 'huge'.
+# Default: 'medium'
+chatFontSize: 'normal'
+
+# This depicts whether or not the plugin will manage nicknames, and whether or not /nick can be used.
+# Default setting: false
+enableCustomNicks: false
+
+# This depicts whether or not the plugin will update player usernames to include the group they are in.
+# Default setting: false
+enableGroupManagement: false
+
+# This depicts whether or not you want the players' suffix to be updated the name of the world they are currently in.
+# Default setting: false
+updateGroupWorldSuffixes: false
+
+# This depicts whether or not chat messaging information is sent to the console.
+# This is useful, as it shows the last message that the player chatted when they
+# chat again, but be careful about leaving this true because it will make for a big server log.
+# Default: false
+showChatDebugMessages: false
+
+# With this setting, you can enable or disable the conversion of popular memes
+# like 'lol' or 'brb' to '*Laughs out loud*' or 'Be right back' when players chat.
+# Default: false
+enableConvertMemes: false
+
+chatMsgTooSimilar: '&6You cannot send a message if it is&z&6very similar to the last message you typed.&z&6This helps cut down on spam. Thank you for your patience.'
+useTooSimilarMsg: false
+enableTooSimilarFilter: false
+
+chatterCussed: '&4CHATTER&r&6, using the following word(s) or a play on them is not socially acceptable for this server:&z&4WORDS'
+useChatterCussedMsg: false
+
+chatterCussedConsoleMsg: 'CHATTER&r&6 has tried to cuss, using the following words:&z&4WORDS'
+useCussConsoleMsg: false
+
+# The following enables or disables the blocking of text.like.this(For links) in the chat Filter.
+# Default: false
+blockLinkMessages: false
+
+# This is the message that is sent to the chatter when they type a link.
+blockedLinkMsg: '&eTo prevent posting links, you are not allowed to chat&z&ewords separated by periods. You typed:&z&3 WORDS'
+
+# This chooses whether or not to nofity the chatter that they cannot say the link that they typed.
+showBlockedLinkMsg: true
+
+# Use the following two settings if you want to block spammy chats:
+noSpamMessage: '&eCHATTER, please do not spam the chat with repeated characters.&z&eThe following is what you typed that is considered spam:&z&3SPAMWORDS'
+# Default: false
+enableSpamFilter: false
+
+# Advanced Chat Settings -------------------------------------------------------------
+# Don't change these unless you know what they do!
+
+# Default: 40
+percentOfCapitalLettersLimit: 40
+
+# Default: 6
+capitalLetterGraceCount: 6

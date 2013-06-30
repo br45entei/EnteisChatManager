@@ -1,0 +1,27 @@
+# This is the Chat Channels configuration file.
+# You can edit the existing channel prefixes to your liking.
+# The 'channelType' setting depicts whether or not the lists below the prefixes are used.
+# Setting it to 'List' will enable the lists, but will disable the permissions that decide which player can see what.
+# Setting it to 'Permission' will enable the permissions, but will disable the lists.
+# Using the 'List' option is ideal for a whitelisted server.
+
+useChannels: true
+
+# Default: 'Permission'
+channelType: Permission
+Channel1Prefix: '&f[&6Channel One&f] '
+Channel2Prefix: '&f[&6Channel Two&f] '
+AdminChannelPrefix: '&f[&6Admin Channel&f] '
+ConsoleChannelPrefix: '&f[&6Server Channel&f] '
+Channel1Players:
+- player1Name
+- player2Name
+Channel2Players:
+- player3Name
+- player4Name
+AdminChannelPlayers:
+- someAdmin1Name
+- someAdmin2Name
+ConsoleChannelPlayers:
+- someOperator1Name
+- someOperator2Name
