@@ -449,10 +449,11 @@ public class MainChatClass extends JavaPlugin implements Listener {
 						}
 					}
 					String prevMessage = getLastPlayerMsg(chatter);
-					if((message.equals("")) || (message == null)) {
+					if(message.equals("") || message == null) {
 						evt.setCancelled(true);
 						return false;
-					}if((showChatDebugMessages) && (!prevMessage.equals("")) && (prevMessage != null)) {
+					}
+					if((showChatDebugMessages) && (!prevMessage.equals("")) && (prevMessage != null)) {
 						sendConsoleMessage(pluginName + chatter.getName() + " Chatted: \"" + rawMsg + "\";" + chatter.getDisplayName() + "'s previous msg: " + prevMessage);
 					}
 					if((enableTooSimilarFilter) && 
@@ -1107,7 +1108,8 @@ public class MainChatClass extends JavaPlugin implements Listener {
 			}
 			EPLib.sendMessage(sender, pluginName + "&eUsage: \"/" + command + " info\" or use an admin command.");
 			return true;
-		}if(command.equalsIgnoreCase("color")) {
+		}
+		if(command.equalsIgnoreCase("color")) {
 			if(!(sender instanceof Player)) {
 				if(args.length != 0) {
 					String mess = "";
@@ -1118,7 +1120,7 @@ public class MainChatClass extends JavaPlugin implements Listener {
 				} else {
 					sendMessage(sender, pluginName + "&eUsage: /" + command + " <message>. You can use '&' color codes and &z.");
 				}
-			} else if((sender.hasPermission("ecm.chat.color")) || (sender.hasPermission("ecm.*"))) {
+			} else if(sender.hasPermission("ecm.chat.color") || sender.hasPermission("ecm.*")) {
 				if(args.length != 0) {
 					String mess = "";
 					int x = 0;
@@ -1129,7 +1131,8 @@ public class MainChatClass extends JavaPlugin implements Listener {
 				}
 			} else sendMessage(sender, noPerm);
 			return true;
-		}if(command.equalsIgnoreCase("custom")) {
+		}
+		if(command.equalsIgnoreCase("custom")) {
 			if(!(sender instanceof Player)) {
 				if(args.length != 0) {
 					if(args[0].equals("impersonate")) {
@@ -1250,9 +1253,9 @@ public class MainChatClass extends JavaPlugin implements Listener {
 					}
 				} else sendMessage(sender, pluginName + "&6You have no one to whom you can reply.");
 				return true;
-			}if((command.equalsIgnoreCase("msg")) || (command.equalsIgnoreCase("message")) || (command.equalsIgnoreCase("pm"))) {
-				if((user != null) && 
-					(!user.hasPermission("ecm.chat.msg")) && (!user.hasPermission("ecm.*"))) {
+			}
+			if(command.equalsIgnoreCase("msg") || command.equalsIgnoreCase("message") || command.equalsIgnoreCase("pm")) {
+				if(user != null && !user.hasPermission("ecm.chat.msg") && !user.hasPermission("ecm.*")) {
 					sendMessage(user, noPerm);
 					return true;
 				}

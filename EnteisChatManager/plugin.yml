@@ -1,0 +1,29 @@
+name: EnteisChatManager
+prefix: "Entei's Chat Manager"
+main: com.gmail.br45entei.enteischatmanager.MainChatClass
+author: Brian_Entei
+version: 0.1
+depend: [EnteisPluginLib]
+softdepend: [Vault]
+description: Manages in-game chat for players.
+
+commands:
+  ecm:
+    description: "Master command for this plugin."
+    permission: "ecm.use"
+    permission-message: "You do not have access to that command."
+    usage: "/eim {info|save|reload}"
+    aliases: [enteischatmanager]
+  color:
+    description: "Lets you chat with color codes."
+    usage: "/color {chat message...}"
+  custom:
+    description: "Allows you to make customized messages that are broadcast to the whole server."
+    usage: "/custom {message to display...} or /custom impersonate {playerName} {message to display...}"
+  nick:
+    description: "Allows you to set your own display name for chat."
+    usage: "/nick {your new display name, can contain '&' color codes.} or /nick reset or /nick reload"
+  msg:
+    description: "Use this command to send a private message to someone."
+    usage: "/msg {playerName} {message to send...} or /msg console {message to send...}"
+    aliases: [message, pm, r]
